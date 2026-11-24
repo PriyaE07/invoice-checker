@@ -1,0 +1,72 @@
+[
+  {
+    "vendor_name": "Rodriguez, Figueroa and Sanchez",
+    "vendor_email": "jillrhodes@miller.com",
+    "bank_account_last4": "0265",
+    "vendor_phone": "989.608.3863",
+    "category": "Medical supplies"
+  },
+  {
+    "vendor_name": "Lewis LLC",
+    "vendor_email": "daviscolin@munoz-roman.info",
+    "bank_account_last4": "0341",
+    "vendor_phone": "+1-516-318-4959",
+    "category": "IT equipment"
+  },
+  {
+    "vendor_name": "James Group",
+    "vendor_email": "francisco53@adams.org",
+    "bank_account_last4": "6413",
+    "vendor_phone": "+1-228-732-7648x3503",
+    "category": "Food service"
+  },
+  {
+    "vendor_name": "Edwards, Rios and Foster",
+    "vendor_email": "ithomas@mcgee.com",
+    "bank_account_last4": "6916",
+    "vendor_phone": "001-496-496-5328x7101",
+    "category": "Cleaning"
+  },
+  {
+    "vendor_name": "Ferrell, Rice and Maddox",
+    "vendor_email": "frazierdanny@potter.com",
+    "bank_account_last4": "8809",
+    "vendor_phone": "(727)404-8281x48932",
+    "category": "Medical supplies"
+  },
+  {
+    "vendor_name": "Smith-Hickman",
+    "vendor_email": "john39@miller.com",
+    "bank_account_last4": "5787",
+    "vendor_phone": "001-682-827-8248x96383",
+    "category": "Office supplies"
+  },
+  {
+    "vendor_name": "Walker LLC",
+    "vendor_email": "chapmanjerry@smith.com",
+    "bank_account_last4": "9973",
+    "vendor_phone": "510.451.8347",
+    "category": "Cleaning"
+  },
+  {
+    "vendor_name": "Lee-Davis",
+    "vendor_email": "agomez@shields-brown.com",
+    "bank_account_last4": "2473",
+    "vendor_phone": "4658133387",
+    "category": "Office supplies"
+  },
+  {
+    "vendor_name": "Morton-Chase",
+    "vendor_email": "williamsyvette@novak.com",
+    "bank_account_last4": "3430",
+    "vendor_phone": "(977)436-0260x64746",
+    "category": "Food service"
+  },
+  {
+    "vendor_name": "Daniels, Adkins and Brown",
+    "vendor_email": "hshaw@brown.com",
+    "bank_account_last4": "6998",
+    "vendor_phone": "(219)313-6193",
+    "category": "Medical supplies"
+  }
+]

@@ -68,3 +68,4 @@ class Vendor(BaseModel):
     vendor_email: EmailStr
     bank_account_last4: str = Field(pattern=r"^\d{4}$")
     vendor_phone: str
+    category: str
