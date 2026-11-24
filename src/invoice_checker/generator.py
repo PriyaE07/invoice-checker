@@ -1,12 +1,11 @@
-from faker import Faker
-from decimal import Decimal
 import json
+from decimal import Decimal
 from pathlib import Path
+
+from faker import Faker
 from pydantic import BaseModel
 
-from invoice_checker.models import Vendor
-from invoice_checker.models import PurchaseOrder
-from invoice_checker.models import POLine
+from invoice_checker.models import POLine, PurchaseOrder, Vendor
 
 SEED = 42
 CATALOG = {
@@ -64,11 +63,13 @@ def make_vendor(fake: Faker) -> Vendor:
         category=fake.random_element(list(CATALOG)),
     )
 
+
 def make_vendors(fake: Faker, count: int) -> list[Vendor]:
     vendors = []
     for _ in range(count):
         vendors.append(make_vendor(fake))
     return vendors
+
 
 def make_purchase_order(fake: Faker, vendor: Vendor, po_number: str) -> PurchaseOrder:
     items = CATALOG[vendor.category]
@@ -89,6 +90,7 @@ def make_purchase_order(fake: Faker, vendor: Vendor, po_number: str) -> Purchase
         order_date=fake.date_between(start_date="-90d", end_date="today"),
         lines=lines,
     )
+
 
 def make_purchase_orders(
     fake: Faker, vendors: list[Vendor], count: int
@@ -113,5 +115,6 @@ def main() -> None:
     orders = make_purchase_orders(fake, vendors, 20)
     save_json(vendors, Path("data/sample/vendors.json"))
     save_json(orders, Path("data/sample/purchase_orders.json"))
-    print(f"Saved {len(vendors)} vendors and {len(orders)} purchase orders to data/sample/")
-    
+    print(
+        f"Saved {len(vendors)} vendors and {len(orders)} purchase orders to data/sample/"  # noqa: E501
+    )

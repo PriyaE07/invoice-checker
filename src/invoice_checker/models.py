@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from pydantic import BaseModel, Field, EmailStr
+from pydantic import BaseModel, EmailStr, Field
 
 
 class LineItem(BaseModel):
@@ -33,7 +33,8 @@ class Invoice(BaseModel):
     )
     po_number: str | None = Field(
         default=None,
-        description="The purchase order number the invoice refers to. Null if not shown.",
+        description="The purchase order number the invoice refers to. "
+        "Null if not shown.",
     )
     payment_terms: str | None = None
     line_items: list[LineItem] = Field(min_length=1)
