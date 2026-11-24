@@ -7,7 +7,9 @@ authors = [
     { name = "PriyaE07", email = "eturi001@umn.edu" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "pydantic>=2.14.4",
+]
 
 [project.scripts]
 invoice-checker = "invoice_checker:main"
