@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 
 
 class LineItem(BaseModel):
@@ -47,6 +47,7 @@ class Invoice(BaseModel):
     )
     currency: str = Field(default="USD", pattern=r"^[A-Z]{3}$")
 
+
 class POLine(BaseModel):
     description: str
     quantity_ordered: int = Field(gt=0)
@@ -60,3 +61,10 @@ class PurchaseOrder(BaseModel):
     order_date: date
     lines: list[POLine] = Field(min_length=1)
     currency: str = Field(default="USD", pattern=r"^[A-Z]{3}$")
+
+
+class Vendor(BaseModel):
+    vendor_name: str
+    vendor_email: EmailStr
+    bank_account_last4: str = Field(pattern=r"^\d{4}$")
+    vendor_phone: str
